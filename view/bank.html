@@ -1,0 +1,20 @@
+<div id="bank" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: close"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parent.selected[0]() }, click: function() { $parent.select(0, $data) }">
+                Получить <img data-bind="attr: { src: img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- ko if: selected[0]() --> <!-- ko with: selected[0]() -->
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(0) }"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parents[1].selected[1]() }, click: function() { $parents[1].select(1, $data) }">
+                <p data-bind="text: text"></p><img data-bind="attr: { src: $parent.img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>

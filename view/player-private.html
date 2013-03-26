@@ -1,0 +1,13 @@
+<div id="private" class="middle">
+    <!-- ko if: data() --> <!-- ko with: data() -->
+    <div class="cell left">
+
+        <div class="image-value money" data-bind="text: money, click: function() { $parent.act('money') }"></div>
+        <div class="image-value gold" data-bind="text: gold, click: function() { $parent.act('gold') }"></div>
+
+        <div class="image-value energy" data-bind="text: energyDesc, click: function() { $parent.act('energy') }"></div>
+        <div class="image-value friends" data-bind="text: friends, click: function() { $parent.act('friends') }"></div>
+
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>

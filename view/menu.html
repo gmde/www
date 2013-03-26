@@ -1,0 +1,10 @@
+<div id="menu">
+    <ul id="nav-menu" class="cell" data-bind="foreach: items">
+        <li class="selectable"
+            data-bind="css: { selected: $data == $parent.selected() && $parent.itemIsOpen },
+                       click: function() { $parent.select($data) }">
+            <img class="float" data-bind="attr: { src: img, title: desc }"/>
+            <span data-bind="text: desc"></span>
+        </li>
+    </ul>
+</div>

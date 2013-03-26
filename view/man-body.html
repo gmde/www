@@ -1,0 +1,31 @@
+<div id="man-body" data-bind="visible: display">
+    <div id="man-views">
+        <button data-bind="css: { selected: viewType() == ManViewTypes.Front }, click: toFront">Вид спереди</button>
+        <button data-bind="css: { selected: viewType() == ManViewTypes.Back }, click: toBack">Вид сзади</button>
+    </div>
+    <!-- ko with: data -->
+        <img id="image-body" data-bind="attr: { src: image }" border="0" usemap="#navigation"/>
+
+        <!-- ko foreach: muscles -->
+        <div class="tooltip background-color-white radius-low opacity-x-high"
+             data-bind="visible: hovered, style: { left: $parents[1].x , top: $parents[1].y }">
+
+            <div class="tooltip-header background-gradient-bright-2 radius-low center" data-bind="text: name"></div>
+
+            <span data-bind="text: frazzle"></span><br/>
+            <span data-bind="text: power"></span><br/>
+
+        </div>
+        <!-- /ko -->
+
+        <map name="navigation" data-bind="foreach: muscles">
+            <area data-bind="attr: { coords: map },
+                             event: { mouseover: function() { $parents[1].mouseOver($data); },
+                                      mouseout: function() { $parents[1].mouseOut($data); },
+                                      mousemove: function() { $parents[1].mouseMove(event); } }"
+                  class="{fillColor:'00ff00'}"
+                  shape="poly"
+                  href="javascript:;">
+        </map>
+    <!-- /ko -->
+</div>

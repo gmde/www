@@ -1,0 +1,50 @@
+﻿#training
+{ background-color: #c8c8c8;}
+
+#training .btn-left, #training .btn-right { position: absolute; top: 50%; margin-top: -15px; }
+
+#training .btn-start { position: absolute; left: 50%; margin-left: -25px; bottom: -30px; }
+
+#training .btn-left { left: 10px; }
+#training .btn-right { right: 10px; }
+
+ul#nav-gyms
+{
+    position: absolute;
+    width: 320px;
+    height: 520px;
+    left: 50%; top: 50%;
+    margin-left: -160px;
+    margin-top: -270px;
+    display: inline-block;
+}
+
+ul#nav-gyms > li
+{
+    margin: 3px;
+    text-align: left;
+    position: relative;
+    padding: 5px;
+    /*border-color: white;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+}
+
+/*ul#nav-gyms > li:hover*/
+/*{*/
+    /*background: none;*/
+    /*border-color: black;*/
+/*}*/
+
+ul#nav-gyms > li img
+{
+    width: 300px;
+    height: 300px;
+}
+
+/*ul#nav-players li img { width: 46px; height: 46px; margin-top: 1px;}*/
+/*ul#nav-players li img:hover { width: 44px; height: 44px; margin-top: 2px; }*/
+/*ul#nav-players li .num { position: absolute; right: 1px; bottom: 0; }*/
+
+
+

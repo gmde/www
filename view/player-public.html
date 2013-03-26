@@ -1,0 +1,8 @@
+<div id="public" data-bind="visible: display">
+    <!-- ko if: data() --> <!-- ko with: data() -->
+    <img class="avatar float" data-bind="attr: { src: avatar }"/>
+    <a target="_blank" title="Ссылка на страницу пользователя" data-bind="text: name, attr: { href: link }"></a><br/>
+    <!--Level: <span data-bind="text: level"></span><br/>-->
+    Масса: <span data-bind="text: $parent.mass"></span><br/>
+    <!-- /ko --> <!-- /ko -->
+</div>

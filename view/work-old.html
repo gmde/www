@@ -1,0 +1,84 @@
+<div id="work" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: close"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parent.selected[0]() }, click: function() { $parent.select(0, $data) }">
+                <span data-bind="text: desc"></span><img data-bind="attr: { src: img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- ko if: selected[0]() --> <!-- ko with: selected[0]() -->
+    <div class="dialog" data-bind="attr: { 'header-data':desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(0) }"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parents[1].selected[1]() }, click: function() { $parents[1].select(1, $data) }">
+                <span data-bind="text: desc"></span>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko --> <!-- /ko -->
+    <!-- ko if: selected[1]() --> <!-- ko with: selected[1]() -->
+    <div class="dialog" data-bind="attr: { 'header-data':desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(1) }"></div>
+        <b>Требования для вступления:</b>
+        <!-- ko with: requirements -->
+        <table>
+            <tr>
+                <td>Рейтинг</td>
+                <td data-bind="text: rating"></td>
+            </tr>
+            <tr>
+                <td>Соседи</td>
+                <td data-bind="text: friends"></td>
+            </tr>
+            <tr>
+                <td>Опыт работы</td>
+                <td data-bind="text: exp"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/rouble.png"></td>
+                <td data-bind="text: r"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/dollar.png"></td>
+                <td data-bind="text: d"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/euro.png"></td>
+                <td data-bind="text: e"></td>
+            </tr>
+        </table>
+        <!-- /ko -->
+        <b>Зарплата:</b>
+        <!-- ko with: pay -->
+        <table>
+            <tr>
+                <td>Рейтинг</td>
+                <td data-bind="text: rating"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/rouble.png"></td>
+                <td data-bind="text: r"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/dollar.png"></td>
+                <td data-bind="text: d"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/euro.png"></td>
+                <td data-bind="text: e"></td>
+            </tr>
+        </table>
+        <!-- /ko -->
+
+        <!-- ko if: use == false -->
+        <button data-bind="enable: available, click: function() { $parent.actFixedUp(false); }">Вступить в должность
+        </button>
+        <!-- /ko -->
+
+        <!-- ko if: use == true -->
+        <p>Это ваша текущяя должность</p>
+        <!-- /ko -->
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>

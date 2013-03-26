@@ -1,0 +1,17 @@
+<div id="top" class="cell">
+    <button data-bind="enable: left(), click: toLeft">&larr;</button>
+    <ul id="nav-players" data-bind="foreach: shownItems">
+        <li data-bind="css: { selected: $data == $parent.selected() }, click: function() { $parent.select($data) }">
+            <img data-bind="attr: { src: avatar }"/>
+            <!-- ko if: id -->
+            <span class="num" data-bind="text: id"></span>
+            <!-- /ko -->
+        </li>
+    </ul>
+    <button data-bind="enable: right(), click: toRight">&rarr;</button>
+    <ul id="nav-action">
+        <li data-bind="css: { selected: mode() == TopModes.Friends }, click: toFriends">My friends</li>
+        <li data-bind="css: { selected: mode() == TopModes.Olimp }, click: toOlimp">Olimp</li>
+        <!--<li>Пригласить соседа</li>-->
+    </ul>
+</div>

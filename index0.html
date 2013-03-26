@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>В квартире</title>
+    <!--<link href="css/normalize.css" rel="stylesheet"/>-->
+    <!--<link href="css/structure.css" rel="stylesheet"/>-->
+    <!--<script src="js/ext/jquery-1.7.2.min.js" type="text/javascript"></script>-->
+    <script src="js/ext/mootools-core.js" type="text/javascript"></script>
+    <script src="js/ext/knockout-2.2.0.js" type="text/javascript"></script>
+    <script src="js/vm/seedwork/ajax.js" type="text/javascript"></script>
+    <script src="js/vm/seedwork/interfaces.js" type="text/javascript"></script>
+    <script src="js/vm/secondary/window.js" type="text/javascript"></script>
+    <!--<script src="js/vm/secondary/confirm.js" type="text/javascript"></script>-->
+    <!--<script src="js/vm/secondary/notification.js" type="text/javascript"></script>-->
+    <!--<script src="js/vm/secondary/list.js" type="text/javascript"></script>-->
+    <script src="js/vm/game/player-private.js" type="text/javascript"></script>
+    <script src="js/vm/game/player-public.js" type="text/javascript"></script>
+    <script src="js/vm/game/top.js" type="text/javascript"></script>
+    <script src="js/vm/game/game.js" type="text/javascript"></script>
+
+    <script src="js/develop/data.js" type="text/javascript"></script>
+    <script src="js/develop/ajax-manager.js" type="text/javascript"></script>
+
+</head>
+<body onload="Init()">
+
+<!-- ko with: PlayerPrivateInfo -->
+<div id="header">
+    <!-- ko if: data() --> <!-- ko with: data() -->
+    <div class="cell">
+        <div class="level" data-bind="text: level, attr: { title: levelDesc }"></div>
+        <span class="font-medium background-transparent" data-bind="text: name"></span>
+        <br/>
+        <span id="logo"></span>
+    </div>
+    <div class="cell">
+        <img id="header-logo" src="images/pic/logo.png"/>
+    </div>
+    <div class="cell left">
+
+        <div class="image-value dollar" data-bind="text: d, click: function() { $parent.act('d') }"></div>
+        <div class="image-value coin" data-bind="text: coin, click: function() { $parent.act('coin') }"></div>
+
+        <br/>
+
+        <div class="image-value clock"
+             data-bind="text: $parent.paytime, visible: $parent.paytime() != '00:00:00'"></div>
+        <div class="image-value getpay"
+             data-bind="text: $parent.paytime, visible: $parent.paytime() == '00:00:00', click: function() { $parent.actGetPay() }"></div>
+        <div class="image-value energy" data-bind="text: energy, click: function() { $parent.act('energy') }"></div>
+        <div class="image-value friends" data-bind="text: friends, click: function() { $parent.act('friends') }"></div>
+
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<div id="center">
+
+<!-- ko with: PlayerPublicInfo -->
+<div id="info" class="opacity-on-hover radius-medium" data-bind="visible: display && $root.Menu.itemIsOpen() == false">
+    <!-- ko if: data() --> <!-- ko with: data() -->
+    <img class="background-color-white radius-medium box-shadow-low" data-bind="attr: { src: picture }"/>
+
+    <div class="image-value like" data-bind="text: like"></div>
+    <br/>
+
+    <div title="Уровень" class="level" data-bind="text: level"></div>
+    <a target="_blank" title="Ссылка на страницу пользователя" data-bind="text: name"></a>
+    <br/>
+    <span data-bind="text: post"></span>
+    <br/>
+    Стоимость квартиры: <span data-bind="text: $root.Flat.totalCost"></span> $
+    <!-- /ko --> <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<div id="load" data-bind="visible: load">
+    <img src="images/pic/load.png"/>
+    <br/>
+    Загрузка...
+</div>
+
+<!-- ko with: Error -->
+<div id="error" class="dialog" data-bind="attr: { 'header-data': header }, visible: display">
+    <div class="close" data-bind="click: hide"></div>
+    <div class="wrap" data-bind="text: wrap"></div>
+</div>
+<!-- /ko -->
+
+<!-- ko with: Confirm -->
+<div id="confirm" class="dialog" data-bind="attr: { 'header-data': header }, visible: display">
+    <div class="close" data-bind="click: hide"></div>
+    <div class="wrap" data-bind="text: wrap"></div>
+    <button data-bind="click: yes">Да</button>
+    <button data-bind="click: no">Нет</button>
+</div>
+<!-- /ko -->
+
+<!-- ko with: Message -->
+<div id="message" class="dialog" data-bind="attr: { 'header-data': header }, visible: display">
+    <div class="close" data-bind="click: hide"></div>
+    <div class="wrap" data-bind="text: wrap"></div>
+    <button data-bind="click: hide">Продолжить</button>
+</div>
+<!-- /ko -->
+
+<!-- ko with: Warning -->
+<div id="warning" class="dialog" data-bind="attr: { 'header-data': header }, visible: display">
+    <div class="close" data-bind="click: hide"></div>
+    <div class="wrap" data-bind="text: wrap"></div>
+</div>
+<!-- /ko -->
+
+<!-- ko with: Notification -->
+<div id="notification" class="background-color-white radius-low opacity-high"
+     data-bind="visible: display, style: { left: x, top: y }">
+    <!-- ko if: d() -->
+    <div class="image-value dollar" data-bind="text: d()"></div>
+    <!-- /ko -->
+
+    <!-- ko if: coin() -->
+    <div class="image-value coin" data-bind="text: coin()"></div>
+    <!-- /ko -->
+
+    <!-- ko if: energy() -->
+    <div class="image-value energy" data-bind="text: energy()"></div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<!-- ko with: Flat -->
+<div id="flat" data-bind="visible: display">
+    <!-- ko if: room() -->
+
+    <div id="total-cost" title="Стоимость комнаты"
+         class="opacity-on-hover background-gradient-bright radius-low pressable"
+         data-bind="visible: $root.Menu.itemIsOpen() == false">
+        <button data-bind="enable: left(), click: toLeft">&larr;</button>
+        Комната <b data-bind="text: room().desc"></b>: <b data-bind="text: room().totalCost"></b> $
+        <button data-bind="enable: right(), click: toRight">&rarr;</button>
+    </div>
+
+    <!-- ko if: room().available -->
+
+    <!-- ko foreach: room().items -->
+    <img data-bind="attr: { src: picture1 }, style: { left: x1, top: y1, 'z-index': layer }, css: { grayscale: hovered }"/>
+
+    <!-- ko if: picture2 -->
+    <img data-bind="attr: { src: picture2 }, style: { left: x2, top: y2, 'z-index': layer }, css: { grayscale: hovered }"/>
+    <!-- /ko -->
+
+    <div class="tooltip background-color-white radius-low opacity-high"
+         data-bind="visible: hovered, style: { left: $parent.x , top: $parent.y }">
+        <div class="tooltip-header background-gradient-bright-2 radius-low center" data-bind="text: itemDesc"></div>
+
+        <!-- ko if: cost.d > 0 -->
+        <div class="image-value dollar" data-bind="text: cost.d"></div>
+        <!-- /ko -->
+
+        <!-- ko if: cost.coin > 0 -->
+        <div class="image-value coin" data-bind="text: cost.coin"></div>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+
+    <img src="images/pic/transparent.png" usemap="#navigation" border="0" class="transparent" style="z-index: 150;">
+    <map name="navigation" data-bind="foreach: room().items">
+        <area data-bind="attr: { coords: map }, click: function() { $parent.select($data); }, event: { mouseover: function() { $parent.mouseOver($data); }, mouseout: function() { $parent.mouseOut($data); }, mousemove: function() { $parent.mouseMove(event); } }"
+              shape="poly"
+              href="javascript:;">
+    </map>
+    <!-- /ko -->
+
+    <!-- ko if: data().guest == false && room().accessorize -->
+    <div id="accessorize" class="opacity-on-hover background-gradient-bright radius-low pressable"
+         data-bind="visible: $root.Menu.itemIsOpen() == false">
+        <ul data-bind="foreach: room().accessorize">
+            <li data-bind="click: function() { $parent.select($data); }">
+                <img data-bind="attr: { src: picture1, title: itemDesc }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: room().available == false && data().guest() == false -->
+    <div class="background-color-black">
+        <img title="Комната заблокирована" class="center32 pressable" src="images/pic/lock.png"
+             data-bind="click: actUnlock">
+    </div>
+    <!-- /ko -->
+
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<!-- ko with: FlatInfo -->
+<div id="flat-info" class="dialog opacity-on-hover" data-bind="attr: { 'header-data': desc }, visible: display">
+    <div class="close" data-bind="click: hide"></div>
+    <!-- ko with: data -->
+    <p class="center" data-bind="text: itemDesc"></p>
+
+    <div class="cell">
+        <img class="center" data-bind="attr: { src: pictureShop }"/>
+    </div>
+
+    <div class="cell">
+        <div class="image-value dollar" data-bind="text: cost.d"></div>
+        <br/>
+
+        <div class="image-value coin" data-bind="text: cost.coin"></div>
+    </div>
+
+    <p>Группа: <span data-bind="text: groupDesc"></span></p>
+
+    <p>Категория: <span data-bind="text: categoryDesc"></span></p>
+
+    <!-- /ko -->
+
+    <button data-bind="click: function() { actSell(false); }">Продать</button>
+    <button data-bind="click: function() { actHide(false); }">Убрать</button>
+</div>
+<!-- /ko -->
+
+<!-- ko with: FlatDefense -->
+<div id="defense" class="background-color-absolute-black radius-medium opacity-x-high" data-bind="visible: display">
+    <img title="Квартира защищена" class="center32 pressable opacity-on-hover" src="images/pic/keyhole.png"
+         data-bind="click: showDetail">
+
+    <!-- ko if: data() -->
+    <div id="defense-info" class="dialog" data-bind="attr: { 'header-data': desc }, visible: detailVisible">
+        <div class="close" data-bind="click: showDetail"></div>
+        <div class="wrap">
+            <p>Степень защиты: <img data-bind="attr: { src: data().picture1 }"/></p>
+
+            <p>Вероятность взлома: 12%</p>
+
+            <p>Затраты энергии: 2</p>
+
+            <p>
+                <button>Взломать</button>
+            </p>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<!-- ko with: Bank -->
+<div id="bank" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: close"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parent.selected[0]() }, click: function() { $parent.select(0, $data) }">
+                Получить <img data-bind="attr: { src: img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- ko if: selected[0]() --> <!-- ko with: selected[0]() -->
+    <div class="dialog" data-bind="attr: { 'header-data':desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(0) }"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parents[1].selected[1]() }, click: function() { $parents[1].select(1, $data) }">
+                <p data-bind="text: text"></p><img data-bind="attr: { src: $parent.img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<!-- ko with: Work -->
+<div id="work" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: close"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parent.selected[0]() }, click: function() { $parent.select(0, $data) }">
+                <span data-bind="text: desc"></span><img data-bind="attr: { src: img }"/>
+            </li>
+        </ul>
+    </div>
+    <!-- ko if: selected[0]() --> <!-- ko with: selected[0]() -->
+    <div class="dialog" data-bind="attr: { 'header-data':desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(0) }"></div>
+        <ul data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parents[1].selected[1]() }, click: function() { $parents[1].select(1, $data) }">
+                <span data-bind="text: desc"></span>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko --> <!-- /ko -->
+    <!-- ko if: selected[1]() --> <!-- ko with: selected[1]() -->
+    <div class="dialog" data-bind="attr: { 'header-data':desc }">
+        <div class="close" data-bind="click: function() { $parent.clear(1) }"></div>
+        <b>Требования для вступления:</b>
+        <!-- ko with: requirements -->
+        <table>
+            <tr>
+                <td>Рейтинг</td>
+                <td data-bind="text: rating"></td>
+            </tr>
+            <tr>
+                <td>Соседи</td>
+                <td data-bind="text: friends"></td>
+            </tr>
+            <tr>
+                <td>Опыт работы</td>
+                <td data-bind="text: exp"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/rouble.png"></td>
+                <td data-bind="text: r"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/dollar.png"></td>
+                <td data-bind="text: d"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/euro.png"></td>
+                <td data-bind="text: e"></td>
+            </tr>
+        </table>
+        <!-- /ko -->
+        <b>Зарплата:</b>
+        <!-- ko with: pay -->
+        <table>
+            <tr>
+                <td>Рейтинг</td>
+                <td data-bind="text: rating"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/rouble.png"></td>
+                <td data-bind="text: r"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/dollar.png"></td>
+                <td data-bind="text: d"></td>
+            </tr>
+            <tr>
+                <td><img src="images/pic/euro.png"></td>
+                <td data-bind="text: e"></td>
+            </tr>
+        </table>
+        <!-- /ko -->
+
+        <!-- ko if: use == false -->
+        <button data-bind="enable: available, click: function() { $parent.actFixedUp(false); }">Вступить в должность
+        </button>
+        <!-- /ko -->
+
+        <!-- ko if: use == true -->
+        <p>Это ваша текущяя должность</p>
+        <!-- /ko -->
+    </div>
+    <!-- /ko --> <!-- /ko -->
+</div>
+<!-- /ko -->
+
+</div>
+
+<!-- ko with: Menu -->
+<div id="menu">
+    <ul id="nav-menu" class="cell" data-bind="foreach: items">
+        <li data-bind="css: { selected: $data == $parent.selected() && $parent.itemIsOpen }, click: function() { $parent.select($data) }">
+            <img data-bind="attr: { src: img, title: desc }"/>
+        </li>
+    </ul>
+</div>
+<!-- /ko -->
+
+<!-- ko with: TopPlayers -->
+<div id="bottom" class="cell">
+    <button data-bind="enable: left(), click: toLeft">&larr;</button>
+    <ul id="nav-players" data-bind="foreach: data">
+        <li data-bind="css: { selected: $data == $parent.selected() }, click: function() { $parent.select($data) }">
+            <img data-bind="attr: { src: photo }"/>
+            <!-- ko if: num -->
+            <span class="num" data-bind="text: num"></span>
+            <!-- /ko -->
+        </li>
+    </ul>
+    <button data-bind="enable: right(), click: toRight">&rarr;</button>
+    <ul id="nav-action">
+        <li data-bind="css: { selected: mode() == TopTypes.Friends }, click: toFriends">Мои соседи</li>
+        <li data-bind="css: { selected: mode() == TopTypes.Top }, click: toTop">Лучшие игроки</li>
+        <!--<li>Пригласить соседа</li>-->
+    </ul>
+</div>
+<!-- /ko -->
+
+<!-- ko with: Update -->
+<div id="update" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: hide"></div>
+        <ul id="nav-update" data-bind="foreach: data">
+            <li data-bind="css: { selected: $data == $parent.selected() }, text: desc, click: function() { $parent.select($data) }"></li>
+        </ul>
+    </div>
+
+    <!-- ko if: selected() -->
+    <img data-bind="attr: { src: selected().img }"/>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+</body>
+</html>

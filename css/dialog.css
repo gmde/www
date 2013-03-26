@@ -1,0 +1,49 @@
+﻿.dialog
+{
+    margin-right: 5px;
+    position: relative;
+    border: 1px solid black;
+    /*border-radius: 5px;*/
+    padding: 20px;
+    display: block;
+    float: left;
+    min-width: 150px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.dialog:before
+{
+    content: attr(header-data);
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    background-color: #333;
+    color: white;
+    margin: -20px -20px 20px -20px;
+    /*border-top-left-radius: 3px;
+    border-top-right-radius: 3px;*/
+    text-align: center !important;
+}
+
+.close
+{
+    display: inline-block;
+    font-family: calibri;
+    font-size: 11pt;
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    vertical-align: middle;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center !important;
+}
+
+.close { position: absolute; right: 4px; top: 4px; }
+.close:after { content: 'x'; }
+
+
+

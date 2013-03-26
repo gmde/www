@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/ext/head.js"></script>
+    <script src="js/develop/loader.js"></script>
+</head>
+<body onload="Start(StartIndex)">
+
+<!-- ko template: { name: 'player-public', data: PlayerPublic } --><!-- /ko -->
+<!-- ko template: { name: 'player-private', data: PlayerPrivate } --><!-- /ko -->
+<div id="main">
+    <!-- ko template: { name: 'window', data: Error } --><!-- /ko -->
+    <!-- ko template: { name: 'loading' } --><!-- /ko -->
+    <!-- ko template: { name: 'window', data: Window } --><!-- /ko -->
+    <!-- ko template: { name: 'confirm', data: Confirm } --><!-- /ko -->
+
+    <!-- ko template: { name: 'man', data: Man } --><!-- /ko -->
+    <!-- ko template: { name: 'training', data: Training } --><!-- /ko -->
+    <!-- ko template: { name: 'gym', data: Gym } --><!-- /ko -->
+    <!-- ko template: { name: 'jobbing', data: Jobbing } --><!-- /ko -->
+</div>
+<!-- ko template: { name: 'menu', data: Menu } --><!-- /ko -->
+<!-- ko template: { name: 'top', data: Top } --><!-- /ko -->
+<!-- ko template: { name: 'updates', data: Updates } --><!-- /ko -->
+
+<!-- ko template: { name: 'bank', data: Bank } --><!-- /ko -->
+<!-- ko template: { name: 'work', data: Work } --><!-- /ko -->
+
+</body>
+</html>

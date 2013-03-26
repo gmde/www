@@ -1,0 +1,63 @@
+﻿ul.nav-weight, ul.nav-weight li, .stange-for-disc, .stange-border, #stange { display: inline-block; }
+
+ul.nav-weight { vertical-align: middle;}
+ul.nav-weight li { vertical-align: middle; margin-left: -2px;}
+.stange-for-disc { width: 45px; height: 8px; }
+.stange-border { width: 10px; height: 12px; }
+#stange { width: 260px; height: 6px; }
+
+#disc-left, #disc-right { position: absolute; width: 45px; top: 0;}
+#disc-left { text-align: right; left: 0; }
+#disc-right { text-align: left; left: 320px; }
+
+#weight { height: 76px; }
+#disc-area { position: relative;}
+
+.disc30 { background-color: blue; height: 80px; width: 7px; }
+.disc25 { background-color: red; height: 80px; width: 6px; }
+.disc20 { background-color: orange; height: 80px; width: 5px; }
+.disc15 { background-color: #006400; height: 80px; width: 5px; }
+.disc10 { background-color: #94360d; height: 60px; width: 5px; }
+.disc5 { background-color: teal; height: 40px; width: 5px; }
+.disc2d5 { background-color: #e24750; height: 30px; width: 3px; }
+.disc1d25 { background-color: #5b5b5b; height: 25px; width: 2px; }
+
+.pdisc30 { background-color: blue; height: 80px; width: 80px; }
+.pdisc25 { background-color: red; height: 80px; width: 80px; }
+.pdisc20 { background-color: orange; height: 80px; width: 80px; }
+.pdisc15 { background-color: #006400; height: 80px; width: 80px; }
+.pdisc10 { background-color: #94360d; height: 60px; width: 60px; }
+.pdisc5 { background-color: teal; height: 40px; width: 40px; }
+.pdisc2d5 { background-color: #e24750; height: 30px; width: 30px; }
+.pdisc1d25 { background-color: #5b5b5b; height: 25px; width: 25px; }
+
+.pdisc { position: absolute; border-radius: 50%; }
+
+.pdisc:before
+{
+    content: attr(header-data);
+    position: absolute;
+    font-size: 12px;
+    top: 5%;
+    left: 50%;
+    margin-left: -6px;
+    color: white;
+}
+
+.pdisc5:before { margin-left: -3px; }
+.pdisc2d5:before { top: 1%; font-size: 9px; margin-left: -6px; }
+.pdisc1d25:before { top: 1%; font-size: 8px; margin-left: -8px; }
+
+.pdisc:after
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    content: ' ';
+}

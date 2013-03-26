@@ -1,0 +1,39 @@
+<div id="jobbing" data-bind="visible: display">
+    <!-- ko if: data() -->
+
+    <div class="bottom-left">
+        Необходимо навесить штангу весом: <span data-bind="text: data().weight"></span>
+    </div>
+
+    <div class="bottom-right">
+        <span data-bind="text: time"></span>
+    </div>
+
+    <div id="weight" class="cell">
+
+        <div title="Гриф, 20 кг" class="pressable stange-for-disc"></div>
+        <div title="Гриф, 20 кг" class="pressable stange-border"></div>
+        <div title="Гриф, 20 кг" class="pressable" id="stange"></div>
+        <div title="Гриф, 20 кг" class="pressable stange-border"></div>
+        <div title="Гриф, 20 кг" class="pressable stange-for-disc"></div>
+
+        <ul id="disc-left" class="nav-weight" data-bind="foreach: itemsSelectedLeft">
+            <li data-bind="attr: { title: name },
+            css: { disc30: d30, disc25: d25, disc20: d20, disc15: d15, disc10: d10, disc5: d5, disc2d5: d2d5, disc1d25: d1d25 }">
+            </li>
+        </ul>
+        <ul id="disc-right" class="nav-weight" data-bind="foreach: itemsSelectedRight">
+            <li data-bind="attr: { title: name },
+            css: { disc30: d30, disc25: d25, disc20: d20, disc15: d15, disc10: d10, disc5: d5, disc2d5: d2d5, disc1d25: d1d25 }">
+            </li>
+        </ul>
+    </div>
+
+    <ul id="disc-area" data-bind="foreach: items">
+        <li class="pdisc" data-bind="attr: { title: name, 'header-data': header },
+        css: { pdisc30: d30, pdisc25: d25, pdisc20: d20, pdisc15: d15, pdisc10: d10, pdisc5: d5, pdisc2d5: d2d5, pdisc1d25: d1d25 },
+        style: { left: x, top: y, '-webkit-transform': degree },
+        click: function() { $parent.select($data); }"></li>
+    </ul>
+    <!-- /ko -->
+</div>

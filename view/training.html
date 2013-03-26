@@ -1,0 +1,16 @@
+<div id="training" data-bind="visible: display">
+    <button class="btn-left" data-bind="enable: left(), click: toLeft">&larr;</button>
+    <ul id="nav-gyms" data-bind="foreach: shownItems">
+        <li data-bind="css: { selected: $data == $parent.selected() },
+                       click: function() { $parent.select($data) }">
+            <div class="h1 center" data-bind="text: desc"></div>
+
+            <div class="center">
+                <img data-bind="attr: { src: img }"/>
+                <button class="btn-start" data-bind="click: function() { select($data); }">Войти</button>
+            </div>
+
+        </li>
+    </ul>
+    <button class="btn-right" data-bind="enable: right(), click: toRight">&rarr;</button>
+</div>

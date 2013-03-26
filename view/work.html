@@ -1,0 +1,23 @@
+<div id="work" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: hide"></div>
+        <ul id="nav-work" data-bind="foreach: data">
+            <li class="left" data-bind="css: { selected: $data == $parent.selected(), inactive: !$data.available || $data.timer() != '00:00:00' },
+                    click: function() { if ($data.available && $data.timer() == '00:00:00')$parent.select($data) }">
+                <span data-bind="text: desc"></span>
+                <br/>
+                Req: <span data-bind="text: req.level + ' ' + req.friends"></span>
+                <br/>
+                Cost: <span data-bind="text: cost.energy"></span>
+
+                <!-- ko if: available == true -->
+                <div class="top-right" data-bind="text: timer()"></div>
+                <!-- /ko -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- ko if: selected() -->
+    <img data-bind="attr: { src: selected().img }"/>
+    <!-- /ko -->
+</div>

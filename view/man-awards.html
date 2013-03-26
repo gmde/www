@@ -1,0 +1,10 @@
+<div id="man-awards">
+    <div>Награды</div>
+    <button data-bind="enable: left(), click: toLeft">&larr;</button>
+    <ul id="nav-awards" data-bind="foreach: shownItems">
+        <li data-bind="css: { selected: $data == $parent.selected() }, click: function() { $parent.select($data) }">
+            <img data-bind="attr: { src: img, title: name }"/>
+        </li>
+    </ul>
+    <button data-bind="enable: right(), click: toRight">&rarr;</button>
+</div>

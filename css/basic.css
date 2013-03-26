@@ -1,0 +1,39 @@
+﻿/* tags */
+a { color: black; }
+
+/* inactive */
+.inactive { opacity: 0.3;}
+
+/* classes */
+.font-medium { font-size: medium; }
+.font-small, body { font-size: smaller; }
+.avatar { width: 50px; height: 50px; }
+
+/* Прозрачность */
+.opacity-low { opacity: 0.3; }
+.opacity-medium { opacity: 0.5; }
+.opacity-high { opacity: 0.7; }
+.opacity-x-high { opacity: 0.9; }
+.opacity-on-hover { opacity: 0.5; -webkit-transition: opacity 0.5s ease; /*-webkit-filter: blur(1px);*/}
+.opacity-on-hover:hover { opacity: 1; /*-webkit-filter: blur(0);*/}
+.grayscale { -webkit-filter: grayscale(100%); -webkit-transition: opacity 0.5s ease; }
+
+/* В КВАРТИРЕ */
+#logo { font-family: 'Droid Sans', arial, serif; font-size: x-large; color: White; text-shadow: Black 0px 1px 3px; font-weight: bold; padding: 10px; }
+#logo:after { content: 'Logo'; }
+
+/* Радиусы закругления */
+.radius-low { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.radius-medium { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.radius-high, #center, #error, #warning { -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; }
+.radius-top-high, .w-header { border-top-left-radius: 7px; border-top-right-radius: 7px; }
+.radius-bottom-high { border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; }
+
+/* Граница */
+.border-low, #center { border-style: solid; border-width: 1px; }
+
+/* Тень от элемента */
+.box-shadow { box-shadow: 0 3px 5px black; -moz-box-shadow: 0 3px 5px black; -webkit-box-shadow: 0 3px 5px black; }
+.box-shadow-low, #center { box-shadow: 0 0 3px black; -moz-box-shadow: 0 0 3px black; -webkit-box-shadow: 0 0 3px black; }
+
+#center { border-color: white !important; }

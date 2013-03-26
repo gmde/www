@@ -1,0 +1,67 @@
+﻿body { font-family: Calibri; }
+a { text-decoration: underline; }
+table { width: 100%; }
+td { width: 50%; }
+li a { text-decoration: none; }
+
+.h1 { font-size: 18px; line-height: 35px;}
+.h2 { font-size: 16px; line-height: 30px;}
+
+.pressable, .pdisc, .image-value, a, .selectable { cursor: pointer; }
+.focused { opacity: 1 !important; }
+.invisible { visibility: hidden; }
+.float { float: left; }
+.center, .cell, table, button, .wrap { text-align: center; }
+.middle, .image-value, .cell, .cell *, img, td, .wrap, button, button * { vertical-align: middle; }
+.left { text-align: left !important; }
+.right { text-align: right !important; }
+.cell { display: table-cell; }
+.top-right { position: absolute; right: 4px; top: 4px; }
+.top-left { left: 4px; top: 4px; }
+.bottom-left { position: absolute; left: 4px; bottom: 4px; }
+.bottom-right { position: absolute; right: 4px; bottom: 4px; }
+
+.image-value { margin: 3px 15px 3px 3px; height: 30px; line-height: 30px; padding-left: 30px; display: inline-block; }
+.rating { background: url(../images/pic/rating.png) no-repeat 0 3px; }
+.rouble { background: url(../images/pic/rouble.png) no-repeat 0 3px; }
+.money { background: url(../images/pic/dollar.png) no-repeat 0 3px; }
+.euro { background: url(../images/pic/euro.png) no-repeat 0 3px; }
+.clock { background: url(../images/pic/clock.png) no-repeat 0 3px; }
+.getpay { background: url(../images/pic/getpay.png) no-repeat 0 3px; }
+.energy { background: url(../images/pic/energy.png) no-repeat 0 7px; padding-left: 25px !important;}
+.friends { background: url(../images/pic/friends.png) no-repeat 0 7px; padding-left: 25px !important;}
+.exp { background: url(../images/pic/exp.png) no-repeat 0 7px; padding-left: 20px !important;}
+.gold { background: url(../images/pic/coin.png) no-repeat 0 3px; }
+.like { background: url(../images/pic/like.png) no-repeat 0 5px; }
+
+button { font-size: small; border: 1px; border-radius: 3px; padding: 2px 6px 3px 6px; margin: 3px; }
+button img { margin-right: 3px; }
+#bank-r, #bank-d, #bank-e, #bank-rde { padding-top: 5px; }
+
+ul#nav-menu { padding-left: 5px; text-align: left;}
+ul#nav-menu img { width: 20px; height: 20px; }
+ul#nav-menu li { padding: 3px 3px 3px 3px; }
+ul#nav-awards { display: inline-block; }
+ul#nav-awards li { display: inline-block; position: relative; }
+ul#nav-awards li img { width: 30px; height: 30px; margin-top: 1px;}
+ul#nav-players { display: inline-block; }
+ul#nav-players li { width: 48px; height: 48px; margin: 3px; background-color: white; display: inline-block; position: relative; }
+ul#nav-players li img { width: 46px; height: 46px; margin-top: 1px;}
+ul#nav-players li img:hover { width: 44px; height: 44px; margin-top: 2px; }
+ul#nav-players li .num { position: absolute; right: 1px; bottom: 0; }
+ul#nav-action { margin-left: 5px; display: inline-block;}
+ul#nav-action li { width: 120px; height: 17px; float: left;}
+ul#nav-update { }
+ul#nav-update li { width: 150px; padding: 3px 0 3px 0; margin-bottom: 2px; }
+ul#nav-factors { }
+ul#nav-factors li { padding: 3px 0 3px 0; margin-bottom: 2px; }
+ul#nav-prof { }
+ul#nav-prof li { text-align: right; }
+ul#nav-post { }
+ul#nav-post li { padding: 5px; text-align: right; }
+ul#nav-work li { position: relative;}
+
+
+
+
+

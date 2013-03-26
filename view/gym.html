@@ -1,0 +1,62 @@
+<div id="gym" data-bind="visible: display">
+    <!-- ko if: data() -->
+    <img data-bind="attr: { src: data().img }"/>
+    <!-- /ko -->
+
+    <ul id="nav-exercises" class="opacity-x-high" data-bind="foreach: shownItems">
+        <li class="selectable" data-bind="css: { selected: $data == $parent.selected() },
+                       click: function() { $parent.select($data) }">
+            <span data-bind="text: name"></span>
+
+            <!--<div class="center">-->
+                <!--<img data-bind="attr: { src: img }"/>-->
+                <!--<button class="btn-start" data-bind="click: function() { select($data); }">Войти</button>-->
+            <!--</div>-->
+
+        </li>
+    </ul>
+
+    <button class="btn-left" data-bind="enable: left() && busy() == false, click: toLeft">&larr;</button>
+    <button class="btn-right" data-bind="enable: right() && busy() == false, click: toRight">&rarr;</button>
+
+    <!-- ko if: selected() -->
+    <div id="exercise-info" class="opacity-x-high" data-bind="with: selected">
+        <div class="h1 center" data-bind="text: name"></div>
+        <table>
+            <tr>
+                <td>Вес снаряда:</td>
+                <td><input type="number" min="20" max="200" step="1.25"
+                           data-bind="enable: $parent.busy() == false, value: weight" /></td>
+            </tr>
+            <tr>
+                <td>Количество повторений:</td>
+                <td><input type="number" min="1" max="100" step="1"
+                           data-bind="enable: $parent.busy() == false, value: cntPlan"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <button
+                        data-bind="enable: $parent.busy() == false, click: function() { $parent.execute() }">Выполнить подход</button>
+                </td>
+                <td>
+                    <progress max="100"
+                            data-bind="value: $parent.progress, visible: $parent.busy">
+
+                            </progress>
+                    <span data-bind="text: cntExecuted, visible: $parent.busy"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>История подходов: </td>
+                <td>
+                    <ul id="journal" data-bind="foreach: journal">
+                        <li data-bind="text: weight + 'x' + cnt + ','"></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br/>
+    </div>
+    <!-- /ko -->
+
+</div>

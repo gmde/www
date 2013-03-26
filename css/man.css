@@ -1,0 +1,12 @@
+﻿#man-factors { left: 0; top: 50px; width: 100px; height: 340px; }
+#man-info { left: 0; top: 0; width: 450px; height: 50px; }
+#man-body { left: 0; top: 0; width: 500px; height: 550px; }
+#man-body img, #man-body .tooltip { position: absolute; -webkit-transition: opacity 1s ease; }
+#man-body .tooltip { z-index: 100; padding: 5px; }
+#man-views { z-index: 100; padding: 5px; }
+#man-awards { left: 0; top: 500px; width: 500px; height: 50px; }
+
+
+
+
+

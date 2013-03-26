@@ -1,0 +1,12 @@
+<div id="updates" data-bind="visible: display">
+    <div class="dialog" data-bind="attr: { 'header-data': desc }">
+        <div class="close" data-bind="click: hide"></div>
+        <ul id="nav-update" data-bind="foreach: items">
+            <li data-bind="css: { selected: $data == $parent.selected() }, text: desc, click: function() { $parent.select($data) }"></li>
+        </ul>
+    </div>
+
+    <!-- ko if: selected() -->
+    <img data-bind="attr: { src: selected().img }"/>
+    <!-- /ko -->
+</div>

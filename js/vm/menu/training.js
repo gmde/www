@@ -31,6 +31,11 @@
                 gym.available = this.isAvailable(gym);
             }
         },
+        hide: function()
+        {
+            if (this.display() == true)this.display(false);
+            this.Gym.hide();
+        },
         isAvailable: function(gym)
         {
             if (gym.req == null) return true;
@@ -70,6 +75,5 @@
             }
 
             this.Gym.get(gym);
-            this.hide();
         }
     });

@@ -1,13 +1,13 @@
 ﻿var ViewModelPlayerPublic = new Class(
     {
         Extends: Ajax,
-        initialize: function()
+        initialize: function(id)
         {
             this.parent(GameItems.PlayerPublic);
 
             this.MASS_BASE = 40;
 
-            this.id = null;
+            this.id = id;
             this.level = ko.observable(null);
             this.factors = ko.observableArray(null);
 
@@ -26,13 +26,12 @@
         },
         getHandler: function(o, next)
         {
-            this.id = o._id;
-            this.level(o.public.level);
+            this.level(o.level);
 
             var info = Game.Social.getInfo();
             o.avatar = info.avatar;
             o.name = info.name;
-            o.link = SocialHttpId + o.id;
+            o.link = SocialHttpId + this.id;
 
             this.parent(o, next);
         }

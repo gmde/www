@@ -9,8 +9,8 @@
             <span data-bind="text: name"></span>
 
             <!--<div class="center">-->
-                <!--<img data-bind="attr: { src: img }"/>-->
-                <!--<button class="btn-start" data-bind="click: function() { select($data); }">Войти</button>-->
+            <!--<img data-bind="attr: { src: img }"/>-->
+            <!--<button class="btn-start" data-bind="click: function() { select($data); }">Войти</button>-->
             <!--</div>-->
 
         </li>
@@ -25,29 +25,31 @@
         <table>
             <tr>
                 <td>Вес снаряда:</td>
-                <td><input type="number" min="20" max="200" step="1.25"
-                           data-bind="enable: $parent.busy() == false, value: weight" /></td>
+                <td><input type="number" data-bind="enable: $parent.execution.busy() == false, value: weight,
+                           attr:{min: $parent.WEIGHT_MIN, max: $parent.WEIGHT_MAX, step: $parent.WEIGHT_STEP}"/></td>
             </tr>
             <tr>
                 <td>Количество повторений:</td>
-                <td><input type="number" min="1" max="100" step="1"
-                           data-bind="enable: $parent.busy() == false, value: cntPlan"/></td>
+                <td><input data-bind="enable: $parent.execution.busy() == false, value: repeats,
+                           attr:{min: $parent.REPEATS_MIN, max: $parent.REPEATS_MAX, step: $parent.REPEATS_STEP}"/></td>
             </tr>
             <tr>
                 <td>
-                    <button
-                        data-bind="enable: $parent.busy() == false, click: function() { $parent.execute() }">Выполнить подход</button>
+                    <button data-bind="enable: $parent.execution.busy() == false, click: function() { $parent.execute() }">
+                        Выполнить подход
+                    </button>
                 </td>
                 <td>
                     <progress max="100"
-                            data-bind="value: $parent.progress, visible: $parent.busy">
+                              data-bind="value: $parent.execution.progress, visible: $parent.execution.busy,
+                              attr:{max: $parent.PROGRESS_MAX}">
 
-                            </progress>
-                    <span data-bind="text: cntExecuted, visible: $parent.busy"></span>
+                    </progress>
+                    <span data-bind="text: $parent.execution.executed, visible: $parent.execution.busy"></span>
                 </td>
             </tr>
             <tr>
-                <td>История подходов: </td>
+                <td>История подходов:</td>
                 <td>
                     <ul id="journal" data-bind="foreach: journal">
                         <li data-bind="text: weight + 'x' + cnt + ','"></li>

@@ -6,11 +6,13 @@
 </head>
 <body onload="Start(StartGym)">
 
-<!-- ko template: { name: 'window', data: Error } --><!-- /ko -->
-<!-- ko template: { name: 'loading' } --><!-- /ko -->
-<!-- ko template: { name: 'window', data: Window } --><!-- /ko -->
-<!-- ko template: { name: 'confirm', data: Confirm } --><!-- /ko -->
-<!-- ko template: { name: 'gym', data: Gym } --><!-- /ko -->
+<div id="main">
+    <!-- ko template: { name: 'gym', data: Gym } --><!-- /ko -->
+    <!-- ko template: { name: 'window', data: Error } --><!-- /ko -->
+    <!-- ko template: { name: 'loading' } --><!-- /ko -->
+    <!-- ko template: { name: 'window', data: Window } --><!-- /ko -->
+    <!-- ko template: { name: 'confirm', data: Confirm } --><!-- /ko -->
+</div>
 
 </body>
 </html>

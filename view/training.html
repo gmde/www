@@ -1,13 +1,12 @@
 <div id="training" data-bind="visible: display">
     <button class="btn-left" data-bind="enable: left(), click: toLeft">&larr;</button>
     <ul id="nav-gyms" data-bind="foreach: shownItems">
-        <li data-bind="css: { selected: $data == $parent.selected() },
-                       click: function() { $parent.select($data) }">
+        <li data-bind="css: { selected: $data == $parent.selected() }">
             <div class="h1 center" data-bind="text: desc"></div>
 
             <div class="center">
                 <img data-bind="attr: { src: img }"/>
-                <button class="btn-start" data-bind="click: function() { select($data); }">Войти</button>
+                <button class="btn-start" data-bind="click: function() { $parent.select($data); }">Войти</button>
             </div>
 
         </li>

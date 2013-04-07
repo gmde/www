@@ -10,7 +10,7 @@
         {
             Game.AjaxInstance.send(this, 'auth', { playerId: 0, authKey: '123'}, function(answer)
             {
-                console.log(answer);
+                console.log(answer.message);
                 if (next != undefined)next();
             });
         }

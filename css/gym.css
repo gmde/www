@@ -1,4 +1,5 @@
-﻿#gym .btn-left, #gym .btn-right { position: absolute; top: 12px; }
+﻿#gym img { position: absolute;}
+#gym .btn-left, #gym .btn-right { position: absolute; top: 12px; }
 
 #gym .btn-left { left: 10px; }
 #gym .btn-right { right: 10px; }

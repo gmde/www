@@ -55,9 +55,8 @@ var ViewModelManBody = new Class(
             if (0.1 < value && value <= 0.2) return "Сильный мышечный тонус";
             if (0.2 < value && value <= 0.3) return "Очень сильный мышечный тонус";
         },
-        getHandler: function(player)
+        getHandler: function(body)
         {
-            var body = player.body;
             var level = Game.PlayerPublic.level();
             if (level == undefined) throw 'level is undefined';
 

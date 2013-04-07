@@ -1,27 +1,26 @@
-﻿#public, #private, #menu, #top, #updates, #main,
+﻿/* Layers */
+#public, #private, #menu, #top, #updates, #main,
 #man, #man-factors, #man-info, #man-body, #man-awards, #man-views,
 #jobbing,
-#training,
-#gym
+#training,#gym
 #error, #warning, #confirm, #message,
 #load
 { position: absolute; }
 
+/* Main Items */
+#man, #man-factors, #man-info, #man-body, #man-awards,
+#jobbing,
+#training,#gym
+{ width: 100%; height: 100%}
+
+/* Windows */
 #error, #warning, #confirm, #message
-{ z-index: 1000; left: 50%; top: 50%; margin-left: -150px; margin-top: -80px; }
-
+{ left: 50%; top: 50%; margin-left: -150px; margin-top: -80px; }
 #load
-{ z-index: 1001; left: 50%; top: 50%; margin-left: -20px; margin-top: -30px; }
+{ left: 50%; top: 50%; margin-left: -20px; margin-top: -30px; }
 
+/* Game Structure */
 #public { left: 0; top: 0; width: 200px; height: 50px; } #private { left: 200px; top: 0; width: 400px; height: 50px; }
 #menu { left: 0; top: 50px; width: 100px; height: 550px; } #main { left: 100px; top: 50px; width: 500px; height: 550px; }
 #top { left: 0; top: 600px; width: 600px; }
 #updates { left: 0; top: 675px; width: 550px; }
-
-#man, #training, #gym
-{ position: relative; width: 500px; height: 550px; }
-
-
-
-
-

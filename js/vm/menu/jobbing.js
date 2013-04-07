@@ -9,6 +9,7 @@
             this.initTimerClock('00:01:00');
             this.initMenu(menu);
 
+            this.weight = ko.observable();
             this.itemsSelected = ko.observableArray([]);
 
             this.summaryWeight = ko.computed(function()
@@ -67,7 +68,7 @@
             }
             this.items(arrNew);
             this.itemsSelected(arrSelected);
-            if (this.summaryWeight() == this.data().weight)
+            if (this.summaryWeight() == this.weight())
             {
                 this.stop();
                 Game.AjaxInstance.send(this, 'complete', null, function(answer)
@@ -81,12 +82,13 @@
         },
         getHandler: function(o)
         {
-            if (o.available == false)
+            if (o.message != undefined)
             {
-                Game.Window.message("Недоступно. Зайдите позже");
+                Game.Window.message(o.message);
                 return;
             }
 
+            var weight = o;
             this.itemsSelected([]);
 
             var arr = this.items();
@@ -99,8 +101,8 @@
             }
             this.items(arr);
 
-            this.data(o);
-            Game.Confirm.showDialog("Необходимо собрать штангу весом: " + o.weight + ". Начать?", this, this.begin)
+            this.weight(weight);
+            Game.Confirm.showDialog("Необходимо собрать штангу весом: " + weight + ". Начать?", this, this.begin)
         },
         begin: function(confirm)
         {

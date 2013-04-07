@@ -1,5 +1,4 @@
-﻿
-/* Фон элемента */
+﻿/* Фон элемента */
 .background-transparent, button { color: White; border-color: #cccccc; text-shadow: Black 0px 1px 3px;}
 .background-color-white, #center { background-color: White; color: Black; border-color: #333333; }
 .background-color-black, #top { background-color: #333333; color: White; border-color: Black; text-shadow: Black 0px 1px 3px;}

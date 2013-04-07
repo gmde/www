@@ -2,13 +2,13 @@
     {
         Extends: Ajax,
         Implements: Events,
-        initialize: function()
+        initialize: function(id)
         {
             this.parent(GameItems.PlayerPrivate);
+            this.id = id;
         },
-        getHandler: function(player, next)
+        getHandler: function(privateInfo, next)
         {
-            var privateInfo = player.private;
             //TODO: get social data
             privateInfo.friends = 5;
             privateInfo.energy = ko.observable(privateInfo.energy);

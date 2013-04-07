@@ -1,104 +1,131 @@
 ﻿var ViewModelGym = new Class(
-    {
-        Extends: Ajax,
-        Implements: [IArrowList, IDic, ITimer],
-        initialize: function()
         {
-            this.initTimer(50);
-
-            this.WEIGHT_MIN = 20;
-            this.MAX_PROGRESS = 100;
-            this.MIN_PROGRESS = 0;
-
-            this.progress = ko.observable(0);
-            this.cntFact = 0;
-            this.speeds = null;
-            this.currentSpeed = null;
-            this.busy = ko.observable(false);
-
-            this.parent(GameItems.Gym);
-            this.initArrowList(10);
-        },
-        get: function(gym)
-        {
-            this.data(gym);
-            this.items(gym.exercises);
-            this.show();
-        },
-        select: function(exercise)
-        {
-            if (this.busy() == true) return;
-            if (exercise.init == undefined)
+            Extends: Ajax,
+            Implements: [IArrowList, IDic, ITimer],
+            initialize: function()
             {
-                exercise.weight = ko.observable(this.WEIGHT_MIN);
-                exercise.cntPlan = ko.observable(0);
-                exercise.cntExecuted = ko.observable(0);
-                exercise.journal = ko.observableArray([]);
-                exercise.init = true;
-            }
-            this.selected(exercise);
-        },
-        execute: function()
-        {
-            var exercise = this.selected();
-            if (exercise.cntPlan() < 1)
+                this.initTimer(50);
+                this.parent(GameItems.Gym);
+                this.initArrowList(10);
+
+                this.WEIGHT_STEP = 1.25;
+                this.WEIGHT_MIN = 20;
+                this.WEIGHT_MAX = 1000;
+                this.PROGRESS_MAX = 100;
+                this.PROGRESS_MIN = 0;
+                this.REPEATS_STEP = 1;
+                this.REPEATS_MIN = 1;
+                this.REPEATS_MAX = 100;
+
+                this.execution = {
+                    busy: ko.observable(false),
+                    progress: ko.observable(null),
+                    executed: ko.observable(null),
+                    speeds: []
+                };
+            },
+            get: function(gym)
             {
-                Game.Window.message("Количество повторений должно быть больше 0");
-                return;
-            }
-
-            this.busy(true);
-            this.progress(this.MIN_PROGRESS);
-
-            var params = {
-                exerciseId: exercise._id,
-                weight: exercise.weight(),
-                cntPlan: exercise.cntPlan()
-            };
-
-            var self = this;
-            Game.AjaxInstance.send(this, 'execute', params, function(answer)
-                {
-                    Game.Window.message(answer.toString());
-
-                    exercise.cntExecuted(0);
-
-                    self.cntFact = answer.cntFact;
-                    var cntMax = answer.cntMax;
-                    var energy = answer.energy;
-
-                    Game.PlayerPrivate.data().energy(
-                        Game.PlayerPrivate.data().energy() - energy
-                    );
-
-                    self.speeds = [10, 10, 10, 9, 9, 9, 8, 8, 8, 7];
-                    self.currentSpeed = self.speeds[0];
-                    self.start();
-                },
-                function()
-                {
-                    self.busy(false);
-                });
-        },
-        run: function()
-        {
-            var exercise = this.selected();
-
-            if (this.progress() >= this.MAX_PROGRESS)
+                this.data(gym);
+                this.items(gym.exercises);
+                this.show();
+            },
+            select: function(exercise)
             {
-                this.progress(this.MIN_PROGRESS);
-                exercise.cntExecuted(exercise.cntExecuted() + 1);
-                if (exercise.cntExecuted() == this.cntFact)
+                if (this.execution.busy() == true) return;
+                if (exercise.init == undefined)
                 {
-                    this.busy(false);
-                    var journal = exercise.journal();
-                    journal.push({ weight: exercise.weight(), cnt: exercise.cntExecuted() });
-                    exercise.journal(journal);
-                    this.stop();
+                    exercise.weight = ko.observable(this.WEIGHT_MIN);
+                    exercise.repeats = ko.observable(this.REPEATS_MIN);
+                    exercise.journal = ko.observableArray([]);
+                    exercise.init = true;
+                }
+                this.selected(exercise);
+            },
+
+            execute: function()
+            {
+                var exercise = this.selected();
+                if (exercise.repeats() < this.REPEATS_MIN || this.REPEATS_MAX < exercise.repeats())
+                {
+                    Game.Window.message(
+                        "Количество повторений должно быть в диапазоне от " + this.REPEATS_MIN +
+                            " до " + this.REPEATS_MAX);
                     return;
                 }
-                this.currentSpeed = this.speeds[exercise.cntExecuted()];
+                if (exercise.weight() < this.WEIGHT_MIN || this.WEIGHT_MAX < exercise.weight())
+                {
+                    Game.Window.message(
+                        "Вес должен быть в диапазоне от " + this.WEIGHT_MIN +
+                            " до " + this.WEIGHT_MAX + " кг");
+                    return;
+                }
+
+                this.execution.busy(true);
+                this.execution.progress(this.PROGRESS_MIN);
+                this.execution.executed(0);
+
+                var params = {
+                    exerciseId: exercise._id,
+                    weight: exercise.weight(),
+                    cntPlan: exercise.repeats()
+                };
+
+                var self = this;
+                Game.AjaxInstance.send(this, 'execute', params, function(answer)
+                    {
+                        if (answer.message != undefined)
+                        {
+                            Game.Window.message(answer.message);
+                            return;
+                        }
+
+                        Game.PlayerPrivate.data().energy(
+                            Game.PlayerPrivate.data().energy() - answer.energy
+                        );
+
+                        var repeats = answer.cntFact;
+                        var repeatsMax = answer.cntMax;
+
+                        var i = 0,
+                            rest = repeats;
+                        while(rest > 0)
+                        {
+                            rest = rest - 1;
+                            self.execution.speeds[i] = rest < 0 ? {
+                                complete: (rest + 1) * self.PROGRESS_MAX
+                            } : {
+                                complete: self.PROGRESS_MAX
+                            };
+                            i++;
+                        }
+                        self.start();
+                    },
+                    function()
+                    {
+                        self.execution.busy(false);
+                    });
+            },
+            run: function()
+            {
+                var exercise = this.selected();
+                var i = this.execution.executed();
+                if (this.execution.progress() >= this.execution.speeds[i].complete)
+                {
+                    this.execution.progress(this.PROGRESS_MIN);
+                    this.execution.executed(i + 1);
+
+                    if (this.execution.speeds.length <= i + 1)
+                    {
+                        this.execution.busy(false);
+                        var journal = exercise.journal();
+                        journal.push({ weight: exercise.weight(), cnt: i + 1 });
+                        exercise.journal(journal);
+                        this.stop();
+                        return;
+                    }
+                }
+                this.progress(this.progress() + 5);
             }
-            this.progress(this.progress() + this.currentSpeed);
-        }
-    });
+        })
+    ;

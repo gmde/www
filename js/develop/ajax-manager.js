@@ -45,8 +45,8 @@
                     process(false);
                     if (answer.error != undefined)
                     {
-                        Game.errorHandler(answer.text);
-                        onError();
+                        Game.errorHandler(answer.error);
+                        if (onError != undefined)onError();
                     }
                     else
                     {
@@ -57,7 +57,7 @@
                 {
                     process(false);
                     Game.errorHandler('Ошибка сервера, попробуйте еще раз.');
-                    onError();
+                    if (onError != undefined)onError();
                 }
             });
         }

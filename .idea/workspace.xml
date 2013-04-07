@@ -5,151 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f01c508b-47e8-4322-b04b-5e940006657f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/body/120_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/body/120_front.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gyms/gym0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/coin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/dollar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/energy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/euro.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/exp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/friends.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/getpay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/keyhole.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/like.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/load.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/bank.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/business.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/holiday.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/home.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/inv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/shop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/menu/work.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/architector.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/boxer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/diplomat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/director.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/driver.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/economist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/footballer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/hunter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/jobless.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/musician.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/prof/soldier.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/rating.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/rde.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/rouble.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/transparent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/bank.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/chest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/game-update.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/garbage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/hi-tech.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/misc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/updates/preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/www.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/confirm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/basic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/gym.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jobbing.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/man.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/rules.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/structure.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style-classic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/training.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gym.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jobbing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/ajax-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/ajax-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/start.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/develop/vk-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/css-loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/head.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/jquery.maphilight.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/knockout-2.2.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/koExternalTemplateEngine_all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/mootools-core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/sammy-latest.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ext/sammy-release.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/auth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/confirm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/dics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/player-private.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/player-public.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/top.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/game/updates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/bank.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/dining-room.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/gym.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/jobbing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/man-awards.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/man-body.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/man-factors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/man.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/training.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/work-old.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/menu/work.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/old/view-model-flat-defense.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/old/view-model-flat-info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/old/view-model-flat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/secondary/window.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/seedwork/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vm/seedwork/interfaces.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/man-awards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/man-body.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/man-factors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/man-info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/man.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/player-private.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/player-public.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/top.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/training.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/updates.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/bank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/confirm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/gym.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/jobbing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/loading.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/man-awards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/man-body.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/man-factors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/man-info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/man.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/menu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/player-private.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/player-public.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/top.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/training.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/updates.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/window.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/work-old.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/work.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/window.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/work.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/gym.css" afterPath="$PROJECT_DIR$/css/gym.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/structure.css" afterPath="$PROJECT_DIR$/css/structure.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style-classic.css" afterPath="$PROJECT_DIR$/css/style-classic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/training.css" afterPath="$PROJECT_DIR$/css/training.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gym.html" afterPath="$PROJECT_DIR$/gym.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/develop/ajax-manager.js" afterPath="$PROJECT_DIR$/js/develop/ajax-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/game/auth.js" afterPath="$PROJECT_DIR$/js/vm/game/auth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/game/player-private.js" afterPath="$PROJECT_DIR$/js/vm/game/player-private.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/game/player-public.js" afterPath="$PROJECT_DIR$/js/vm/game/player-public.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/menu/gym.js" afterPath="$PROJECT_DIR$/js/vm/menu/gym.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/menu/jobbing.js" afterPath="$PROJECT_DIR$/js/vm/menu/jobbing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/menu/man-body.js" afterPath="$PROJECT_DIR$/js/vm/menu/man-body.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vm/menu/training.js" afterPath="$PROJECT_DIR$/js/vm/menu/training.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/training.html" afterPath="$PROJECT_DIR$/training.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/gym.html" afterPath="$PROJECT_DIR$/view/gym.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/jobbing.html" afterPath="$PROJECT_DIR$/view/jobbing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/training.html" afterPath="$PROJECT_DIR$/view/training.html" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,85 +40,94 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49496222">
+    <splitter split-orientation="horizontal" split-proportion="0.47544074">
       <split-first>
         <leaf>
-          <file leaf-file-name="training.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/training.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="41" selection-end="302" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="interfaces.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/seedwork/interfaces.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="156" column="0" selection-start="3769" selection-end="3801" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="work.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/work.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="8" selection-start="120" selection-end="169" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gym.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/menu/gym.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="77" column="24" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ajax-manager.js" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/develop/ajax-manager.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="17" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.8468468">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="man-body.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/menu/man-body.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="60" column="36" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="loader.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/develop/loader.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="24" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="player-private.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/game/player-private.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="58" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="gym.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/gym.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="28" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+                <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jobbing.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/jobbing.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="man.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/man.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="normalize.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/normalize.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="rules.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/rules.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style-classic.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/style-classic.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="training.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/training.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vk-manager.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/develop/vk-manager.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="7" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="structure.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/structure.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="53" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gym.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/vm/menu/gym.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="86" column="38" selection-start="3205" selection-end="3205" vertical-scroll-proportion="0.64144146">
                   <folding />
                 </state>
               </provider>
@@ -254,73 +137,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="dics.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/game/dics.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="38" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/game/game.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="57" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="player-public.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/game/player-public.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="39" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gym.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="gym.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/gym.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="62" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.8648649">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="jobbing.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/vm/menu/jobbing.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="84" column="13" selection-start="4150" selection-end="4150" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="global.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/develop/global.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="0" selection-start="343" selection-end="412" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gym.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gym.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+                <state line="37" column="65" selection-start="1796" selection-end="1796" vertical-scroll-proportion="-20.625">
                   <folding />
                 </state>
               </provider>
@@ -329,7 +149,7 @@
           <file leaf-file-name="training.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/training.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+                <state line="14" column="6" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -338,7 +158,34 @@
           <file leaf-file-name="training.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/training.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="0" selection-start="429" selection-end="489" vertical-scroll-proportion="0.0">
+                <state line="18" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-11.25">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gym.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gym.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="72" selection-start="515" selection-end="515" vertical-scroll-proportion="-8.125">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="72" selection-start="893" selection-end="893" vertical-scroll-proportion="0.51724136">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="training.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/vm/menu/training.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="37" column="10" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -359,22 +206,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/structure.css" />
-        <option value="$PROJECT_DIR$/view/training.html" />
-        <option value="$PROJECT_DIR$/css/gym.css" />
-        <option value="$PROJECT_DIR$/js/develop/loader.js" />
-        <option value="$PROJECT_DIR$/js/vm/game/dics.js" />
-        <option value="$PROJECT_DIR$/js/develop/global.js" />
-        <option value="$PROJECT_DIR$/js/vm/game/game.js" />
-        <option value="$PROJECT_DIR$/view/player-private.html" />
-        <option value="$PROJECT_DIR$/js/vm/game/player-public.js" />
-        <option value="$PROJECT_DIR$/view/man-body.html" />
-        <option value="$PROJECT_DIR$/js/vm/menu/man-body.js" />
         <option value="$PROJECT_DIR$/js/vm/game/player-private.js" />
-        <option value="$PROJECT_DIR$/gym.html" />
-        <option value="$PROJECT_DIR$/view/gym.html" />
-        <option value="$PROJECT_DIR$/js/vm/menu/gym.js" />
+        <option value="$PROJECT_DIR$/js/vm/game/auth.js" />
+        <option value="$PROJECT_DIR$/view/jobbing.html" />
+        <option value="$PROJECT_DIR$/js/vm/menu/jobbing.js" />
         <option value="$PROJECT_DIR$/js/develop/ajax-manager.js" />
+        <option value="$PROJECT_DIR$/js/vm/menu/training.js" />
+        <option value="$PROJECT_DIR$/css/training.css" />
+        <option value="$PROJECT_DIR$/view/training.html" />
+        <option value="$PROJECT_DIR$/training.html" />
+        <option value="$PROJECT_DIR$/css/gym.css" />
+        <option value="$PROJECT_DIR$/css/style-classic.css" />
+        <option value="$PROJECT_DIR$/css/structure.css" />
+        <option value="$PROJECT_DIR$/view/gym.html" />
+        <option value="$PROJECT_DIR$/gym.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/vm/menu/gym.js" />
       </list>
     </option>
   </component>
@@ -429,6 +276,128 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -436,13 +405,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="C:/Distrib/Photoshop CS4/save-maps.jsx" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -545,7 +514,11 @@
       <created>1364136710204</created>
       <updated>1364136710204</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0.0.0.1 init">
+      <created>1364306841376</created>
+      <updated>1364306841376</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -570,12 +543,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16288877" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13600422" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.49815497" order="7" side_tool="true" content_ui="tabs" />
@@ -626,7 +599,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.0.7 gym, get server data" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.0.1 init" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -648,6 +621,7 @@
     <MESSAGE value="Version 0.0.0.6 gym module" />
     <MESSAGE value="Version 0.0.0.6 gym view: progress invisible" />
     <MESSAGE value="Version 0.0.0.7 gym, get server data" />
+    <MESSAGE value="0.0.0.1 init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -655,106 +629,112 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/player-private.html">
+    <entry file="file://$PROJECT_DIR$/css/jobbing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="0.26061776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/gym.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/game/game.js">
+    <entry file="file://$PROJECT_DIR$/css/man.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/develop/start.js">
+    <entry file="file://$PROJECT_DIR$/js/vm/game/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="59" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/develop/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/man-body.html">
+    <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="66" selection-start="140" selection-end="140" vertical-scroll-proportion="0.036900368" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/menu/man-body.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="36" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/game/player-private.js">
+    <entry file="file://$PROJECT_DIR$/view/updates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="58" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/rules.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/training.html">
+    <entry file="file://$PROJECT_DIR$/js/vm/seedwork/interfaces.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+        <state line="156" column="0" selection-start="3769" selection-end="3801" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/game/player-public.js">
+    <entry file="file://$PROJECT_DIR$/css/style-classic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="39" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/training.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="343" selection-end="412" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/menu/training.js">
+    <entry file="file://$PROJECT_DIR$/js/develop/vk-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gym.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+        <state line="23" column="7" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vm/menu/gym.js">
+    <entry file="file://$PROJECT_DIR$/css/structure.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="24" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.0">
+        <state line="10" column="53" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/develop/ajax-manager.js">
+    <entry file="file://$PROJECT_DIR$/training.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="17" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.8468468">
+        <state line="18" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-11.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/gym.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="62" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.8648649">
+        <state line="37" column="65" selection-start="1796" selection-end="1796" vertical-scroll-proportion="-20.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="72" selection-start="515" selection-end="515" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="72" selection-start="893" selection-end="893" vertical-scroll-proportion="0.51724136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vm/menu/gym.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="38" selection-start="3205" selection-end="3205" vertical-scroll-proportion="0.64144146">
           <folding />
         </state>
       </provider>

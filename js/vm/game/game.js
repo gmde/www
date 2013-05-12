@@ -63,71 +63,8 @@
             , this);
         },
 
-        init: function()
-        {
-            this.initEvents();
-        },
-
         errorHandler: function(error)
         {
             this.Error.message(error);
-        },
-
-        initEvents: function()
-        {
-            var self = this;
-            this.Top.addEvent("actSelectPlayer", function(args)
-            {
-                self.handlerSelectPlayer(args);
-            });
-            this.PlayerPrivate.addEvent("actGetPay", function(args)
-            {
-                self.handlerGetPay(args);
-            });
-        },
-
-        handlerSelectPlayer: function(args)
-        {
-            this.PlayerPublic.get(args);
-        },
-        handlerGetPay: function(args)
-        {
-            this.PlayerPublic.get();
-            this.PlayerPrivate.get();
-            this.Message.message("Поздравляем! Вы получили зарплату.");
-        },
-        handlerFixedUp: function(args)
-        {
-            this.PlayerPublic.get();
-            this.PlayerPrivate.get();
-            this.Message.message("Поздравляем! Вы перешли на новую должность.");
-        },
-        handlerExchange: function(args)
-        {
-            this.PlayerPublic.get();
-            this.PlayerPrivate.get();
-            this.Message.message("Обмен голосов прошёл успешно.");
-        },
-        handlerSell: function(args)
-        {
-            this.PlayerPrivate.get();
-            this.Message.message("Вещь продана.");
-        },
-        handlerHide: function(args)
-        {
-            this.PlayerPrivate.get();
-            this.Message.message("Вещь перемещена в инвентарь.");
-        },
-        handlerUnlock: function()
-        {
-            this.PlayerPrivate.get();
-            this.Message.message("Комната разблокирована.");
-        },
-
-        startApp: function()
-        {
-            this.PlayerPublic.get();
-            this.PlayerPrivate.get();
-            this.Top.get();
         }
     });

@@ -36,6 +36,8 @@ function Start(f)
     {
         Game.Dics.get(function(dics)
         {
+            Game.Work.initData(dics.work);
+            Game.Bank.initData(dics.bank);
             Game.Training.initDic(dics.exercises, dics.gyms);
             Game.Factors.dicFactors = dics.factors;
             Game.ManAwards.dicAwards = dics.awards;

@@ -9,9 +9,13 @@
             this.initTimer(1000);
             this.initMenu(menu);
         },
-        getHandler: function(o)
+        initData: function(data)
         {
-            this.initObservableData(o);
+            this.initObservableData(data);
+            this.data(data);
+        },
+        get: function()
+        {
             this.show();
             this.start();
         },

@@ -1,0 +1,8 @@
+<div data-bind="visible: display">
+    <div>Отдых:</div>
+    <!-- ko template: { name: 'catalog' } --><!-- /ko -->
+
+    <!-- ko if: selected() -->
+    <!-- ko template: { name: 'item-rest', data: selected() } --><!-- /ko -->
+    <!-- /ko -->
+</div>

@@ -36,7 +36,7 @@ var IDic = new Class(
             var result = [];
             for (var i = 0; i < array.length; i++)
             {
-                var id = array[i];
+                var id = array[i]._id;
                 for (var j = 0; j < dic.length; j++)
                 {
                     var item = dic[j];
@@ -212,6 +212,53 @@ var IArrowList = new Class(
         }
     });
 
+var ICatalog = new Class(
+    {
+        Implements: [IArrowList],
+        initCatalog: function(maxShownItems, group)
+        {
+            this.group = group;
+            this.initArrowList(maxShownItems);
+        },
+        initItems: function()
+        {
+            var items = Game.Dics.getFactorsByGroup(this.group);
+            for(var i = 0; i < items.length; i++)
+            {
+                var item = items[i];
+                item.cost.votes = 1;
+                item.cost.parent = this;
+            }
+            this.items(items);
+            this.show();
+        },
+        buy: function(confirmed)
+        {
+            if (confirmed == true) {
+                Game.AjaxInstance.send(this, 'buy', { factorId : this.selected()._id }, function(answer)
+                {
+                    var text = "Куплено";
+                    Game.Window.message(text);
+                    Game.PlayerPrivate.get();
+                });
+            }
+            else {
+                var money = Game.PlayerPrivate.money;
+                var gold = Game.PlayerPrivate.gold;
+
+                var item = this.selected();
+                if (item.cost.money > money || item.cost.gold > gold)
+                {
+                    Game.Message.message("Не хватает средств");
+                    return;
+                }
+
+                Game.Confirm.showDialog("Купить?: ", this, this.buy)
+            }
+        }
+    }
+);
+
 var INestedList = new Class(
     {
         initList: function()
@@ -266,3 +313,12 @@ var IMenu = new Class(
             if (this.hide) this.hide();
         }
     });
+
+//var IItem = new Class(
+//    {
+//        initItem: function(data)
+//        {
+//            this.data = ko.observable(data);
+//        }
+//    }
+//);

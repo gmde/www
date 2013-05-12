@@ -30,8 +30,10 @@
             </tr>
             <tr>
                 <td>Количество повторений:</td>
-                <td><input data-bind="enable: $parent.execution.busy() == false, value: repeats,
-                           attr:{min: $parent.REPEATS_MIN, max: $parent.REPEATS_MAX, step: $parent.REPEATS_STEP}"/></td>
+                <td><input data-bind="enable: $parent.execution.busy() == false && force() == false, value: repeats,
+                           attr:{min: $parent.REPEATS_MIN, max: $parent.REPEATS_MAX, step: $parent.REPEATS_STEP}"/>
+                    <input type="checkbox" data-bind="checked: force"> До отказа
+                </td>
             </tr>
             <tr>
                 <td>

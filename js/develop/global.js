@@ -10,17 +10,18 @@ var GameItems =
     Top: "top",
     Olimp: "olimp",
     Bank: "bank",
-    Shop: "shop",
+    //Shop: "shop",
     Training: "training",
     Gym: "gym",
-    Rest: "rest",
+    Rest: "factors",
+    Stimulant: "factors",
     Work: "work",
-    Rat: "rat",
-    Inv: "inv",
+    //Rat: "rat",
+    //Inv: "inv",
     ManFactors: "factors",
     ManBody: "body",
     ManAwards: "awards",
-    DiningRoom: "dining-room",
+    DiningRoom: "factors",
     Jobbing: "jobbing"
 }
 
@@ -36,15 +37,14 @@ function Start(f)
         Game.Dics.get(function(dics)
         {
             Game.Training.initDic(dics.exercises, dics.gyms);
-            Game.ManFactors.dicFactors = dics.factors;
+            Game.Factors.dicFactors = dics.factors;
             Game.ManAwards.dicAwards = dics.awards;
             Game.ManBody.dicMuscles = dics.muscles;
             Game.ManBody.dicMusclesView = dics.muscles_view;
             Game.Top.toFriends();
 
             f();
+            ko.applyBindings(Game);
         });
     });
-
-    ko.applyBindings(Game);
 }

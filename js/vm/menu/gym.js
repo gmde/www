@@ -4,7 +4,7 @@
             Implements: [IArrowList, IDic, ITimer],
             initialize: function()
             {
-                this.initTimer(50);
+                this.initTimer(25);
                 this.parent(GameItems.Gym);
                 this.initArrowList(10);
 
@@ -21,6 +21,7 @@
                     busy: ko.observable(false),
                     progress: ko.observable(null),
                     executed: ko.observable(null),
+                    max: null,
                     speeds: []
                 };
             },
@@ -37,6 +38,7 @@
                 {
                     exercise.weight = ko.observable(this.WEIGHT_MIN);
                     exercise.repeats = ko.observable(this.REPEATS_MIN);
+                    exercise.force = ko.observable(false);
                     exercise.journal = ko.observableArray([]);
                     exercise.init = true;
                 }
@@ -66,17 +68,20 @@
                 this.execution.executed(0);
 
                 var params = {
+                    gymId: this.data()._id,
                     exerciseId: exercise._id,
                     weight: exercise.weight(),
-                    cntPlan: exercise.repeats()
+                    repeats: exercise.force() == true ? 0 : exercise.repeats()
                 };
 
                 var self = this;
-                Game.AjaxInstance.send(this, 'execute', params, function(answer)
+                Game.AjaxInstance.send(this, 'execute', params,
+                    function(answer)
                     {
                         if (answer.message != undefined)
                         {
                             Game.Window.message(answer.message);
+                            self.execution.busy(false);
                             return;
                         }
 
@@ -84,11 +89,11 @@
                             Game.PlayerPrivate.data().energy() - answer.energy
                         );
 
-                        var repeats = answer.cntFact;
-                        var repeatsMax = answer.cntMax;
+                        self.execution.speeds = [];
+                        self.execution.max = answer.repeatsMax;
 
                         var i = 0,
-                            rest = repeats;
+                            rest = answer.repeats;
                         while(rest > 0)
                         {
                             rest = rest - 1;
@@ -112,20 +117,25 @@
                 var i = this.execution.executed();
                 if (this.execution.progress() >= this.execution.speeds[i].complete)
                 {
-                    this.execution.progress(this.PROGRESS_MIN);
-                    this.execution.executed(i + 1);
+                    var ii = this.execution.speeds[i].complete == 100 ? i + 1 : i;
+                    this.execution.executed(ii);
 
                     if (this.execution.speeds.length <= i + 1)
                     {
-                        this.execution.busy(false);
-                        var journal = exercise.journal();
-                        journal.push({ weight: exercise.weight(), cnt: i + 1 });
-                        exercise.journal(journal);
                         this.stop();
+                        var journal = exercise.journal();
+                        journal.push({ weight: exercise.weight(), cnt: ii });
+                        exercise.journal(journal);
+
+                        var self = this;
+                        setTimeout(function(){ self.execution.busy(false);}, 1000);
+//                        this.execution.busy(false);
                         return;
                     }
+
+                    this.execution.progress(this.PROGRESS_MIN);
                 }
-                this.progress(this.progress() + 5);
+                this.execution.progress(this.execution.progress() + 5);
             }
         })
     ;

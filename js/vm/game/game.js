@@ -11,39 +11,40 @@
             this.Social = new VKManager();
             this.Message = new ViewModelWindow("Сообщение");
             this.Error = new ViewModelWindow("Ошибка");
-            //this.Warning = new ViewModelWindow("Предупреждение");
             this.Confirm = new ViewModelConfirm();
             this.Window = new ViewModelWindow("Сообщение");
-            //this.Notification = new ViewModelNotification();
 
-            this.ManFactors = new ViewModelManFactors();
+            this.Factors = new ViewModelFactors({ desc: "Физическая форма", img: ""});
             this.ManAwards = new ViewModelManAwards();
             this.ManInfo = new ViewModelPlayerPublic();
             this.ManBody = new ViewModelManBody();
 
             this.Gym = new ViewModelGym();
 
-            this.Man = new ViewModelMan({ desc: "Физическая форма", img: ""}, this.ManFactors, this.ManInfo, this.ManBody, this.ManAwards);
+            this.Man = new ViewModelMan({ desc: "Физическая форма", img: ""}, this.ManInfo, this.ManBody, this.ManAwards);
             this.Bank = new ViewModelBank({ desc: "Банк", img: ""});
-            this.DiningRoom = new ViewModelDiningRoom({ desc: "Столовая", img: ""});
+            this.DiningRoom = new ViewModelDiningRoom({ desc: "Жральня", img: ""});
             this.Work = new ViewModelWork({ desc: "Работа", img: ""});
-            this.Rest = new ViewModelWork({ desc: "Отдых", img: ""});
+            this.Rest = new ViewModelRest({ desc: "Отдыхальня", img: ""});
+            this.Stimulant = new ViewModelStimulant({ desc: "Спортивное питание", img: ""});
             this.Training = new ViewModelTraining({ desc: "Тренировка", img: ""}, this.Gym);
-            this.Shop = new ViewModelWork({ desc: "Магазин", img: ""});
+            //this.Shop = new ViewModelWork({ desc: "Магазин", img: ""});
             this.Jobbing = new ViewModelJobbing({ desc: "Подработка", img: ""});
-            this.Inv = new ViewModelWork({ desc: "Вещи", img: ""});
+            //this.Inv = new ViewModelWork({ desc: "Вещи", img: ""});
             this.Records = new ViewModelWork({ desc: "Рекорды", img: ""});
 
             this.Menu = new ViewModelMenu([
                 this.Man,
-                this.Inv,
+                this.Factors,
+                //this.Inv,
                 this.Bank,
                 this.Work,
                 this.Jobbing,
-                this.Shop,
+                //this.Shop,
                 this.Training,
                 this.DiningRoom,
                 this.Rest,
+                this.Stimulant,
                 this.Records
             ]);
 
@@ -66,11 +67,6 @@
         {
             this.initEvents();
         },
-
-//        ajax: function(o)
-//        {
-//            this.AjaxInstance.send(o);
-//        },
 
         errorHandler: function(error)
         {

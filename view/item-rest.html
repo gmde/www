@@ -1,0 +1,25 @@
+<div class="item-food">
+
+    <!-- ko template: { name: 'item-desc' } --><!-- /ko -->
+
+    Длительность: <span data-bind="text: duration"></span>
+    <br/>
+
+    <!-- ko if: reg.energy > 0 -->
+    Восстановление энергии: <span data-bind="text: reg.energy"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko if: reg.frazzle > 0 -->
+    Восстановление энергии: <span data-bind="text: reg.frazzle"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko if: reg.growth > 0 -->
+    Восстановление энергии: <span data-bind="text: reg.growth"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko template: { name: 'item-cost', data: cost } --><!-- /ko -->
+
+</div>

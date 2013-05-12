@@ -1,0 +1,10 @@
+<div id="man-factors" data-bind="visible: display">
+    <div>Действующие факторы:</div>
+    <button data-bind="enable: left(), click: toLeft">&uarr;</button>
+    <ul id="nav-factors" data-bind="foreach: shownItems">
+        <li data-bind="css: { selected: $data == $parent.selected() }, click: function() { $parent.select($data) }">
+            <!-- ko template: { name: 'item-head' } --><!-- /ko -->
+        </li>
+    </ul>
+    <button data-bind="enable: right(), click: toRight">&darr;</button>
+</div>

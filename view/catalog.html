@@ -1,10 +1,11 @@
-<div id="man-factors" data-bind="visible: display">
-    <div>Действующие факторы:</div>
+<div class="catalog" data-bind="visible: display">
+
     <button data-bind="enable: left(), click: toLeft">&uarr;</button>
-    <ul id="nav-factors" data-bind="foreach: shownItems">
+    <ul data-bind="foreach: shownItems">
         <li data-bind="css: { selected: $data == $parent.selected() }, click: function() { $parent.select($data) }">
-            <img data-bind="attr: { src: img }"/><span data-bind="text: name"></span>
+            <!-- ko template: { name: 'item-head' } --><!-- /ko -->
         </li>
     </ul>
     <button data-bind="enable: right(), click: toRight">&darr;</button>
+
 </div>

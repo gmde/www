@@ -42,7 +42,9 @@ head.js(
     "js/vm/menu/man.js",
     "js/vm/menu/man-body.js",
     "js/vm/menu/man-awards.js",
-    "js/vm/menu/man-factors.js",
+    "js/vm/menu/factors.js",
+    "js/vm/menu/rest.js",
+    "js/vm/menu/stimulant.js",
     "js/vm/menu/dining-room.js",
     "js/vm/menu/jobbing.js",
     "js/develop/start.js"

@@ -1,0 +1,22 @@
+<div class="item-food">
+
+    <!-- ko template: { name: 'item-desc' } --><!-- /ko -->
+
+    <!-- ko if: food.protein > 0 -->
+    Белки: <span data-bind="text: food.protein"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko if: food.carbs > 0 -->
+    Углеводы: <span data-bind="text: food.carbs"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko if: food.weight > 0 -->
+    Вес: <span data-bind="text: food.weight"></span>
+    <br/>
+    <!-- /ko -->
+
+    <!-- ko template: { name: 'item-cost', data: cost } --><!-- /ko -->
+
+</div>

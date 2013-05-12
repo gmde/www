@@ -8,14 +8,77 @@ function StartConfirm()
     Game.Confirm.showDialog("text", function(result){ alert(result);});
 }
 
-function StartManFactors()
+function StartFactors()
 {
-    Game.ManFactors.get();
+    Game.Factors.get();
+}
+
+function StartDiningRoom()
+{
+    Game.DiningRoom.get();
+}
+
+function StartStimulant()
+{
+    Game.Stimulant.get();
+}
+
+function StartCatalog()
+{
+    Game.Catalog = Game.Rest;
+    Game.Catalog.get();
+}
+
+function StartRest()
+{
+    Game.Rest.get();
 }
 
 function StartManInfo()
 {
     Game.ManInfo.get();
+}
+
+function StartItemHead()
+{
+    Game.ItemHead = { img: '1.jpg', name: '12354'};
+}
+
+function StartItemCost()
+{
+    var parent = { buy: function() { alert('buy');}};
+    Game.ItemCost = { money: 5, gold: 1, votes: 1, parent: parent };
+}
+
+function StartItemDesc()
+{
+    Game.ItemDesc = {
+        img: '1.jpg',
+        name: 'Название1'
+    };
+}
+
+function StartItemFood()
+{
+    var parent = { buy: function() { alert('buy');}};
+    Game.ItemFood = {
+        img: '1.jpg',
+        name: 'Название1',
+        cost: { money: 5, gold: 1, votes: 1, parent: parent },
+        food: { protein: 10, carbs: 30, weight: 200 }
+    };
+}
+
+function StartItemRest()
+{
+    var parent = { buy: function() { alert('buy');}};
+    Game.ItemRest = {
+        img: '1.jpg',
+        name: 'Название1',
+        duration: 1,
+        cost: { money: 5, gold: 1, votes: 1, parent: parent },
+        reg: { energy: 0.3, frazzle: 0.1, growth: 0 }
+    };
 }
 
 function StartManBody()
